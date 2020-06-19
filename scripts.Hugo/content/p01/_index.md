@@ -1,6 +1,6 @@
 ---
 weight:      13
-title:       " index title "
+title:       " p01 看观看网站 "
 date:        2020-06-01T02:01:28-07:00
 description: >
     index !
@@ -9,7 +9,6 @@ tags:
 categories:
   - index
 indexSET:
-  - PDT,America/Los_Angeles,SanFrancisco(USA),UTC-8 美国三藩市
   - Youtube,youtube.jpg,https://www.youtube.com
   - Cn.pornhub,cn.pornhub.com.jpg,https://cn.pornhub.com
   - Pornhub,pornhub.com.jpg,https://www.pornhub.com
@@ -18,8 +17,8 @@ indexSET:
   - Facebook,facebook.com.jpg,https://www.facebook.com/
   - Fkzww,fkzww.net.jpg,http://www.fkzww.net/forum-4-1.html
   - Downloads,downloads.jpg,https://hope000.github.io/downloads/
-indexWidth:     600
-indexHeight:    480
-textSET:
   - hk2006c,https://hk2006c.chinadsf.org/
+indexWidth:     200
+indexHeight:    150
+textSET:
 ---

@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title> {{ .Params.title }} </title>
 
         <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
 
@@ -10,70 +11,25 @@ table, th, td {
 }
         </style>
 
-        <script>
-            var TTTmyVar = setInterval(TTTmyTimer, 2700);
-function TTTmyTimer() {
-
-    var TTTdynTime00 = new Date();
-
-    {{  range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-    {{- $elem_25 := "" -}}
-    {{- $elem_26 := "" -}}
-    {{- range $elem_23, $elem_24 := split $elem_val "," -}}
-    {{- if eq 0 $elem_23 -}}
-    {{- $elem_25 = $elem_24 -}}
-    {{- end -}}
-    {{- if eq 1 $elem_23 -}}
-    {{- $elem_26 = $elem_24 -}}
-    {{- end -}}
-    {{- end  }}
-    document.getElementById('TTTdynTime_{{- $elem_index -}}').innerHTML = 
-        TTTdynTime00.toLocaleString("en-US", {timeZone: {{- $elem_26 -}}});
-    {{ end }}
-
-}
-        </script>
-
-
     </head>
-    <body onload="TTTmyTimer()">
+    <body>
 
-        <table>
-            <tr>
-                <th>idx</th>
-                <th>Name</th>
-                <th>TimeZone</th>
-                <th>city</th>
-                <th>decription</th>
-                <th>localTime(now)</th>
-            </tr>
-            {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-            {{ if eq 2 ( mod $elem_index 3 ) }}
-            <tr  style="background: #ebe0e0">
-                {{ else }}
-                <tr>
-                    {{ end }}
-                    <td> {{$elem_index}} </td>
-                    {{- range $elem_21, $elem_22 := split $elem_val "," }}
-                    <td> 
-                        {{- $elem_22 -}} 
-                    </td>
-                    {{- end }}
+        <h1 style="text-align:center" > {{ .Params.title }} </h1>
 
-                    <td> <a id="TTTdynTime_{{- $elem_index -}}"> </a> </td>
-                </tr>
+        {{ $divH := .Params.indexHeight }}{{ $divW := .Params.indexWidth }}
+
+        <div style=" ">
+            {{- range $elem_index, $elem_val := .Params.indexSET -}}
+            <div style="height:{{ $divH }}; width:{{ $divW }}; border-style:solid; float:left; "  >
+                {{$elem_index}} :=:
+                {{- range $elem_21, $elem_22 := split $elem_val "," }}
+                ==
+                {{- $elem_22 -}} 
                 {{- end }}
-        </table>
+            </div >
+            {{ end }}
+        </div>
 
     </body>
 </html>
-
-{{/* /usr/share/zoneinfo/Asia/Hong_Kong */}}
-{{/* 
-2 
-EDT 
-America/New_York 
-Washington_DC 
-3/23/2020, 5:21:24 AM 
-*/}}
 
