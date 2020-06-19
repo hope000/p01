@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+        <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
+
+        <style>
+
+table, th, td {
+    border: 1px solid black;
+}
+        </style>
+
+        <script>
+            var TTTmyVar = setInterval(TTTmyTimer, 2700);
+function TTTmyTimer() {
+
+    var TTTdynTime00 = new Date();
+
+    {{  range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+    {{- $elem_25 := "" -}}
+    {{- $elem_26 := "" -}}
+    {{- range $elem_23, $elem_24 := split $elem_val "," -}}
+    {{- if eq 0 $elem_23 -}}
+    {{- $elem_25 = $elem_24 -}}
+    {{- end -}}
+    {{- if eq 1 $elem_23 -}}
+    {{- $elem_26 = $elem_24 -}}
+    {{- end -}}
+    {{- end  }}
+    document.getElementById('TTTdynTime_{{- $elem_index -}}').innerHTML = 
+        TTTdynTime00.toLocaleString("en-US", {timeZone: {{- $elem_26 -}}});
+    {{ end }}
+
+}
+        </script>
+
+
+    </head>
+    <body onload="TTTmyTimer()">
+
+        <table>
+            <tr>
+                <th>idx</th>
+                <th>Name</th>
+                <th>TimeZone</th>
+                <th>city</th>
+                <th>decription</th>
+                <th>localTime(now)</th>
+            </tr>
+            {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+            {{ if eq 2 ( mod $elem_index 3 ) }}
+            <tr  style="background: #ebe0e0">
+                {{ else }}
+                <tr>
+                    {{ end }}
+                    <td> {{$elem_index}} </td>
+                    {{- range $elem_21, $elem_22 := split $elem_val "," }}
+                    <td> 
+                        {{- $elem_22 -}} 
+                    </td>
+                    {{- end }}
+
+                    <td> <a id="TTTdynTime_{{- $elem_index -}}"> </a> </td>
+                </tr>
+                {{- end }}
+        </table>
+
+    </body>
+</html>
+
+{{/* /usr/share/zoneinfo/Asia/Hong_Kong */}}
+{{/* 
+2 
+EDT 
+America/New_York 
+Washington_DC 
+3/23/2020, 5:21:24 AM 
+*/}}
+
