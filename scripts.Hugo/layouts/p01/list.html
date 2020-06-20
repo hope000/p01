@@ -21,11 +21,13 @@ table, th, td {
         <div style=" ">
             {{- range $elem_index, $elem_val := .Params.indexSET -}}
             <div style="height:{{ $divH }}; width:{{ $divW }}; border-style:solid; float:left; "  >
-                {{$elem_index}} :=:
-                {{- range $elem_21, $elem_22 := split $elem_val "," }}
-                ==
-                {{- $elem_22 -}} 
+                {{- $ee1:="" }} {{- $ee2:="" }} {{- $ee3:="" }}
+                {{- range $idx1, $elem1 := split $elem_val "," }}
+                {{- $elem1 -}} 
                 {{- end }}
+                1. {{ $ee1 }} <br>
+                2. {{ $ee2 }} <br>
+                3. {{ $ee3 }} <br>
             </div >
             {{ end }}
         </div>
