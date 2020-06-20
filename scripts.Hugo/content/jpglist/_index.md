@@ -18,8 +18,8 @@ indexSET:
   - Fkzww,fkzww.net.jpg,http://www.fkzww.net/forum-4-1.html
   - Downloads,downloads.jpg,https://hope000.github.io/downloads/
   - hk2006c,https://hk2006c.chinadsf.org/
-indexWidth:     300
-indexHeight:    225
+indexWidth:     200
+indexHeight:    150
 
 textSET:
 tableMax: 2
