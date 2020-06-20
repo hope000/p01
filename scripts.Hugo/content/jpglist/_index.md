@@ -9,10 +9,10 @@ tags:
 categories:
   - index
 indexSET:
-  - Youtube,youtube.jpg,https://www.youtube.com
   - Cn.pornhub,cn.pornhub.com.jpg,https://cn.pornhub.com
-  - Pornhub,pornhub.com.jpg,https://www.pornhub.com
-  - Amazon,amazon.com.jpg,https://www.amazon.com
+  - Javdove,www.javdove.com.jpg,https://www.javdove.com/
+  - Youtube,youtube.jpg,https://www.youtube.com/
+  - Amazon,amazon.com.jpg,https://www.amazon.com/
   - Twitter,twitter.com.jpg,https://twitter.com/
   - Facebook,facebook.com.jpg,https://www.facebook.com/
   - Fkzww,fkzww.net.jpg,http://www.fkzww.net/forum-4-1.html
