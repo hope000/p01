@@ -9,8 +9,8 @@ tags:
 categories:
   - index
 indexSET:
-  - Cn.pornhub,cn.pornhub.com.jpg,https://cn.pornhub.com
-  - Javdove,www.javdove.com.jpg,https://www.javdove.com/
+#  - Cn.pornhub,cn.pornhub.com.jpg,https://cn.pornhub.com
+#  - Javdove,www.javdove.com.jpg,https://www.javdove.com/
   - Youtube,youtube.jpg,https://www.youtube.com/
   - Amazon,amazon.com.jpg,https://www.amazon.com/
   - Twitter,twitter.com.jpg,https://twitter.com/
