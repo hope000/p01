@@ -20,7 +20,7 @@ indexSET:
   - ip.jjj123,http://ip.jjj123.com/
   - ipecho.net,https://ipecho.net
   - ipinfo.io,https://ipinfo.io
-  - hk2006c,https://hk2006c.chinadsf.org/
+  - hk2007h,https://hk2007h.chinadsf.org/
 indexWidth:     200
 indexHeight:    150
 
